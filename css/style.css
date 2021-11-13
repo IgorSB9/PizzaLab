@@ -44,13 +44,8 @@ header{
     background: #0e1419 url(../img/background_header.jpg) no-repeat center;
     width: 100rem;
     transition: all 0.7s ease 0s;
-    z-index: 2;
 }
 
-.header:active{
-    background: #f00;
-    padding: 10px 0;
-}
 .header-page__top{
     display: flex;
     justify-content: space-between;

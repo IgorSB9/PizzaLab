@@ -40,15 +40,22 @@ li, a, button{
 /* header-page */
 
 header{
+    position: fixed;
     background: #0e1419 url(../img/background_header.jpg) no-repeat center;
     width: 100rem;
+    transition: all 0.7s ease 0s;
+    z-index: 2;
 }
 
+.header:active{
+    background: #f00;
+    padding: 10px 0;
+}
 .header-page__top{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 0 10%;
     border-bottom: 1px solid gray;
     
 }
@@ -106,7 +113,7 @@ header button:hover{
 
 .main-section{
     display: flex;
-    margin: 40px;
+    margin: 190px 30px;
     color:black;
     flex-wrap: wrap;
     flex: 1 1 auto;
@@ -158,8 +165,7 @@ header button:hover{
 
 .pizza-cart__coast{
     font-size: 20px;
-    padding-left: 30px;
-
+    padding-left: 10px;
 }
 
 .btn-pizza__to-basket{
@@ -279,6 +285,11 @@ footer p{
     visibility: hidden;
 }
 
+.modal-window:target{
+    opacity: 1;
+    visibility: visible;
+}
+
 .modal-window__body{
     min-height: 100%;
     display: flex;
@@ -292,7 +303,6 @@ footer p{
     color: black;
     max-width: 800px;
     padding: 30px;
-    
 }
 
 .modal-window__close{
@@ -313,9 +323,21 @@ footer p{
   margin:10px 0;
 }
 
-.modal-window__title-add{}
-.pizza-title{}
-.modal-window__img-add{}
+.modal-window__btn-add{
+    padding: 9px 25px;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin-top: 10px;
+}
+
+.modal-window__btn-add:hover{
+    background-color:rgb(54, 53, 53) ;
+} 
+
+
 
 
 /* ./modal-window */

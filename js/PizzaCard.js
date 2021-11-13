@@ -34,7 +34,8 @@ class PizzaCard {
             `;
     });
 
-    ROOT_MENU.innerHTML = htmlMenuContainer;
+    ROOT_MENU.innerHTML = htmlMenuContainer
+
 }
 }
 

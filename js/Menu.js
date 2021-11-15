@@ -1,6 +1,5 @@
 const MENU_PIZZA = [
     {
-        id: 'el1',
         logo: "/img/menu/pizza-cart4.jpg",
         title: "Мясная",
         price30: '499',
@@ -9,7 +8,6 @@ const MENU_PIZZA = [
     },
 
     {
-        id: 'el2',
         logo: "/img/menu/pizza-cart1.jpg",
         title: "Пепперони",
         price30: '399',
@@ -18,7 +16,6 @@ const MENU_PIZZA = [
     },
 
     {
-        id: 'el3',
         logo: "/img/menu/pizza-cart2.jpg",
         title: "Итальянская",
         price30: '599',
@@ -27,11 +24,10 @@ const MENU_PIZZA = [
     },
 
     {
-        id: 'el4',
         logo: "/img/menu/pizza-cart3.jpg",
         title: "Чили",
         price30: '549',
         price35: '749',
         description: "Пицца соус, сыр моцарелла, колбаски пепперони, бекон, свинина, сочная курочка, свежий помидор"
-    }
+    },
 ]

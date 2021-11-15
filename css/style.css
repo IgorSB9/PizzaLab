@@ -42,8 +42,9 @@ li, a, button{
 header{
     position: fixed;
     background: #0e1419 url(../img/background_header.jpg) no-repeat center;
-    width: 100rem;
+    width: 100%;
     transition: all 0.7s ease 0s;
+    box-shadow: 0px -5px 5px -5px rgba(20, 20, 20, 0.4) inset;
 }
 
 .header-page__top{
@@ -331,8 +332,9 @@ footer p{
 .modal-window__btn-add:hover{
     background-color:rgb(54, 53, 53) ;
 } 
-
-
-
-
 /* ./modal-window */
+
+@media (max-width: 1700px) {
+    
+}
+

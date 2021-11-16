@@ -118,12 +118,16 @@ header button:hover{
 .menu-section__pizza-cart{
     width: 300px;
     border: 1px solid gray;
-
 }
 
 .menu-section__container{
     background-color: white;
     margin: 20px 30px;
+}
+
+.edit-container{
+    display: flex;
+    margin-left: 220px;
 }
 
 .pizza-menu__title{
@@ -334,7 +338,5 @@ footer p{
 } 
 /* ./modal-window */
 
-@media (max-width: 1700px) {
-    
-}
+
 

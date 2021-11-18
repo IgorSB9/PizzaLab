@@ -1,0 +1,6 @@
+.page__nav{
+    display: flex;
+    margin-left: auto;
+    cursor:pointer;
+    color: #fff;
+    }

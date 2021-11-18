@@ -8,14 +8,14 @@ footer{
     flex-wrap: wrap;
   }
   
-  .footer-container{
+  .container{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
   }
   
-  .footer-container__about{
+  .container__about{
     margin-right: 40px;
     width: 40%;
     
@@ -43,16 +43,16 @@ footer{
   
   }
   
-  .footer-container__soc{
+  .container__soc{
     margin-top: 20px;
     display: flex;
   }
   
-  .footer-container__soc li{
+  .container__soc li{
     list-style: none;
   }
   
-  .footer-container__soc li a{
+  .container__soc li a{
     display: inline-block;
     background: #000;
     display: flex;
@@ -63,17 +63,17 @@ footer{
     border-radius: 4px;
   }
   
-  .footer-container__soc li a:hover{
+  .container__soc li a:hover{
     background: #f00;
     color: #fff;
     font-size: 20px;
   }
   
-  .footer-container__links{
+  .container__links{
     margin-right: 400px;
   }
   
-  .footer-container__links li a:hover{
+  .container__links li a:hover{
     background: rgb(172, 170, 170);
     color: #fff;
   }

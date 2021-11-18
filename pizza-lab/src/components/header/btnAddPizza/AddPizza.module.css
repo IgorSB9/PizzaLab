@@ -1,0 +1,12 @@
+.pizza__btn{
+    padding: 9px 25px;
+    background-color: rgb(177, 5, 13);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .pizza__btn:hover{
+    background-color:rgb(151, 3, 11) ;
+  }

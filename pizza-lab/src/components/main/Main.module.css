@@ -1,28 +1,29 @@
-.main-section{
+.section{
     background:url(../../img/background_main.jpg) repeat center;
-    margin: 10px 30px;
     color:black;
+    margin-top: 10px;
     flex: 1 1 auto;
   }
-  .section-top__nav-ul{
+  .top__nav ul{
   display: flex; 
   align-items: center;
   }
   
-  .main-section__container button{
-  padding: 9px 25px;
-    background-color: rgb(145, 72, 75);
+  .container button{
+    padding: 9px 25px;
+    margin-left: 20px;
+    background-color: rgb(177, 5, 13);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
   }
   
-  .main-section__container button:hover{
+  .container button:hover{
   background-color:rgb(151, 3, 11) ;
   }
   
-  .section-top__nav-li{
+  .top__nav_li{
   margin-left: 10px;
   }
   
@@ -30,24 +31,24 @@
   
   /* menu-section */
   
-  .menu-section__container{
+  .section__container{
   display: flex;
   flex-wrap: wrap;
   margin: 20px 30px 20px 30px;
   }
-  .pizza-cart__container{
+  .cart__container{
   margin: 20px 0 20px 40px;
   background-color: #fff;
   width: 300px;
   border: 1px solid gray;
   }
   
-  .card-logo{
+  .logo{
   width: 300px;
   height:300px;
   }
   
-  .pizza-menu__title{
+  .menu__title{
     text-align: center;
     margin: 15px;
   }
@@ -56,7 +57,7 @@
     padding: 10px 10px;
   }
   
-  .btn__pizza-size{
+  .btn__size{
     padding: 9px 25px;
     background-color: rgb(253, 253, 253);
     border: 1px solid gray;
@@ -67,25 +68,26 @@
     margin-left: 30px;
   }
   
-  .btn__pizza-size:hover{
+  .btn__size:hover{
     background-color:rgb(230, 228, 228);
     color: black;
     
   }
   
-  .pizza-cart__coast{
+  .cart__coast{
     font-size: 20px;
     padding-left: 10px;
   }
   
-  .pizza-cart__price{
+  .cart__price{
   padding: 10px 30px ;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   }
   
-  .btn-pizza__to-basket{
-    padding: 9px 25px;
+  .pizza__toBasket{
+    padding: 6px 15px;
     background-color: rgb(177, 5, 13);
     border: none;
     border-radius: 50px;
@@ -93,11 +95,11 @@
     transition: all 0.3s ease 0s;
   }
   
-  .btn-pizza__to-basket:hover{
+  .btn__toBasket:hover{
     background-color:rgb(151, 3, 11) ;
   }
   
-  .pizza-menu__description{
+  .menu__description{
     padding: 10px 10px 10px 10px ;
     color: rgb(172, 170, 170);
   }

@@ -1,16 +1,16 @@
-footer{
-    background: #0e1419 url(../../img/background_footer.jpg) no-repeat center;
-    width: 100%;
-    height: auto;
-    padding: 50px 100px; 
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
+footer {
+  background: #0e1419 url(../../img/background_footer.jpg) no-repeat center;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}

@@ -1,8 +1,13 @@
 import React from "react";
-import logo from "./Logo.module.css"
+import logoImg from "../../../img/pizza_icon.png";
+import logo from "./Logo.module.css";
 
 export const Logo = () => {
-    return <div className={logo.page__logo}>
-    <img src = "../../../img/pizza_icon.jpg" alt='logo' class={logo.logo}/>
- </div>
-}
+  return (
+    <div className={logo.page__logo}>
+      <a href="#">
+        <img src={logoImg} alt="logo" class={logo.logo} />
+      </a>
+    </div>
+  );
+};

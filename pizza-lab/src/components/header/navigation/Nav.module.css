@@ -1,6 +1,8 @@
-.page__nav{
-    display: flex;
-    margin-left: auto;
-    cursor:pointer;
-    color: #fff;
-    }
+.page__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+  color: #fff;
+}

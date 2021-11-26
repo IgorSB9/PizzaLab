@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import menu from "./Menu.module.css";
 import { PizzaCard } from "./pizzaCard/PizzaCard";
 
 export const Menu = () => {
-  let [pizza, setPizza] = useState([
+  let pizza = [
     {
+      id: 1,
       logo: "/img/menu/pizza-cart4.jpg",
       title: "Мясная",
       price30: "499",
@@ -14,6 +15,7 @@ export const Menu = () => {
     },
 
     {
+      id: 2,
       logo: "/img/menu/pizza-cart1.jpg",
       title: "Пепперони",
       price30: "399",
@@ -23,6 +25,7 @@ export const Menu = () => {
     },
 
     {
+      id: 3,
       logo: "/img/menu/pizza-cart2.jpg",
       title: "Итальянская",
       price30: "599",
@@ -32,6 +35,7 @@ export const Menu = () => {
     },
 
     {
+      id: 4,
       logo: "/img/menu/pizza-cart3.jpg",
       title: "Чили",
       price30: "549",
@@ -40,6 +44,7 @@ export const Menu = () => {
         "Пицца соус, сыр моцарелла, колбаски пепперони, бекон, свинина, сочная курочка, свежий помидор",
     },
     {
+      id: 5,
       logo: "/img/menu/pizza-cart3.jpg",
       title: "Чили",
       price30: "549",
@@ -48,6 +53,7 @@ export const Menu = () => {
         "Пицца соус, сыр моцарелла, колбаски пепперони, бекон, свинина, сочная курочка, свежий помидор",
     },
     {
+      id: 6,
       logo: "/img/menu/pizza-cart3.jpg",
       title: "Чили",
       price30: "549",
@@ -56,6 +62,7 @@ export const Menu = () => {
         "Пицца соус, сыр моцарелла, колбаски пепперони, бекон, свинина, сочная курочка, свежий помидор",
     },
     {
+      id: 7,
       logo: "/img/menu/pizza-cart3.jpg",
       title: "Чили",
       price30: "549",
@@ -63,16 +70,11 @@ export const Menu = () => {
       description:
         "Пицца соус, сыр моцарелла, колбаски пепперони, бекон, свинина, сочная курочка, свежий помидор",
     },
-  ]);
+  ];
 
   return (
     <div className={menu.section__container}>
-      <PizzaCard pizza={pizza} />
+      <PizzaCard key={pizza.id} pizza={pizza} />
     </div>
   );
-  // logo={menu.logo}
-  // title={menu.title}
-  // price30={menu.price30}
-  // price35={menu.price35}
-  // description={menu.description}
 };

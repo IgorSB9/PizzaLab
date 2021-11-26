@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React from "react";
 import card from "./PizzaCard.module.css";
 
@@ -13,7 +14,7 @@ export const PizzaCard = (props) => {
     <div className={card.cart}>
       {props.pizza.map((newPizza) => {
         return (
-          <div className={card.cart__container}>
+          <div key={newPizza.id} className={card.cart__container}>
             <div className={card.menu__logo}>
               <img url={newPizza.logo} className={card.logo}></img>
             </div>
@@ -37,6 +38,9 @@ export const PizzaCard = (props) => {
           </div>
         );
       })}
+      <Button className={card.addPizza__btn} variant={"contained"}>
+        +
+      </Button>
     </div>
   );
 };

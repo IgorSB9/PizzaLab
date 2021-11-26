@@ -3,7 +3,7 @@ import info from "./Info.module.css";
 
 export const Info = () => {
   return (
-    <div class={info.container__links}>
+    <div className={info.container__links}>
       <h2>Информация</h2>
       <ul>
         <li>

@@ -4,10 +4,15 @@ import content from "./Content.module.css";
 import { Menu } from "./Menu/Menu";
 
 export const Content = () => {
-  let categories = ["Все пиццы", "Вегетарианские", "Острые", "Мясные"];
+  let categories = [
+    { id: 1, title: "Все пиццы" },
+    { id: 2, title: "Вегетарианские" },
+    { id: 3, title: "Острые" },
+    { id: 4, title: "Мясные" },
+  ];
   return (
     <div id="main" className={content.section}>
-      <Filters categories={categories} />
+      <Filters key={categories.id} categories={categories} />
       <Menu />
     </div>
   );

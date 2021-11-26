@@ -5,7 +5,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 
 export const About = () => {
   return (
-    <div class={about.container__about}>
+    <div className={about.container__about}>
       <h2>О нас</h2>
       <p>
         рррррррррррррр ррррррррррр рррррррррррр рррррр рррррррр рррррр ррррррр
@@ -14,7 +14,7 @@ export const About = () => {
         ррррррррррррррррррррррррррррррррррррррррррррррррр
         рррррррррррррррррррррррррррррррр
       </p>
-      <ul class={about.container__soc}>
+      <ul className={about.container__soc}>
         <li>
           <a>
             <FacebookIcon

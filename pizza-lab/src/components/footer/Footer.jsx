@@ -5,8 +5,8 @@ import { Info } from "./info/Info";
 
 export const Footer = () => {
   return (
-    <footer id="footer" class={footer.footer}>
-      <div class={footer.container}>
+    <footer id="footer" className={footer.footer}>
+      <div className={footer.container}>
         <About />
         <Info />
       </div>

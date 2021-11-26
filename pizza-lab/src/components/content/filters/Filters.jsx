@@ -8,8 +8,8 @@ export const Filters = ({ categories }) => {
       <div className={filter.container__nav}>
         <ul>
           {categories.map((el) => (
-            <li>
-              <button className={filter.top__nav_text}>{el}</button>
+            <li key={el.id}>
+              <button className={filter.top__nav_text}>{el.title}</button>
             </li>
           ))}
         </ul>

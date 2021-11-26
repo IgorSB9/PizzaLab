@@ -2,13 +2,13 @@ import React from "react";
 import modal from "./AddPizzaWindow.module.css";
 import CancelIcon from "@mui/icons-material/Cancel";
 
-export const AddPizzaModalWindow = ({ active, setActive }) => {
+export const AddPizzaModalWindow = () => {
   return (
     <div id="modal" className={modal.window}>
       <div className={modal.window__body}>
         <div className={modal.window__content}>
           <a href="" className={modal.window__close}>
-            <CancelIcon onClick={() => setActive(false)} />
+            <CancelIcon />
           </a>
           <div className={modal.window__titleAdd}>
             <h2>Добавление пиццы</h2>

@@ -1,0 +1,14 @@
+.container__links {
+  margin-right: 400px;
+}
+
+.container__links li a:hover {
+  background: rgb(172, 170, 170);
+  color: #fff;
+}
+
+.container__links h2 {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}

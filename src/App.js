@@ -15,6 +15,12 @@ function App() {
   const RemovePizza = (fId) => {
     pizza = pizza.filter((f) => f.id !== fId);
     setPizza(pizza);
+    console.log(pizza);
+  };
+
+  const AddNewPizza = (data) => {
+    setPizza([...pizza, data]);
+    console.log([...pizza, data]);
   };
 
   return (
@@ -24,7 +30,10 @@ function App() {
           <Route path="/signUp" element={<Regisration />} />
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/basket" element={<BasketPage pizza={pizza} />} />
-          <Route path="/addPizza" element={<AddPizzaWindow pizza={pizza} />} />
+          <Route
+            path="/addPizza"
+            element={<AddPizzaWindow pizza={pizza} AddNewPizza={AddNewPizza} />}
+          />
           <Route
             path="/"
             element={<Content pizza={pizza} RemovePizza={RemovePizza} />}

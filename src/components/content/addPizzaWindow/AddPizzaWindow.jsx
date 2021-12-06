@@ -15,11 +15,12 @@ export const AddPizzaWindow = (props) => {
     mode: "onBlur",
   });
 
-  let [newMenu, setNewMenu] = useState(menu);
+  // let [newMenu, setNewMenu] = useState(menu);
 
   const onSubmit = (data) => {
-    setNewMenu(newMenu.push(data));
-    console.log(newMenu);
+    props.AddNewPizza(data);
+    // console.log(data);
+    // setNewMenu(newMenu.push(data));
     reset();
     // localStorage.setItem("title", data.title);
     // localStorage.setItem("logo", data.logo);

@@ -2,6 +2,7 @@ import React from "react";
 import about from "./About.module.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import { Link } from "@mui/material";
 
 export const About = () => {
   return (
@@ -16,22 +17,22 @@ export const About = () => {
       </p>
       <ul className={about.container__soc}>
         <li>
-          <a>
+          <Link to="/facebook">
             <FacebookIcon
               name="facebook"
               type="logo"
               color="#ffffff"
             ></FacebookIcon>
-          </a>
+          </Link>
         </li>
         <li>
-          <a>
+          <Link to="/instagram">
             <InstagramIcon
               name="instagram"
               type="logo"
               color="#ffffff"
             ></InstagramIcon>
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

@@ -1,6 +1,9 @@
-import React from "react";
-import modal from "./AddPizzaWindow.module.css";
+import React, { useState } from "react";
+import addPizza from "./AddPizzaWindow.module.css";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import menu from "../../pizza-list";
+import CloseIcon from "@mui/icons-material/Close";
 
 export const AddPizzaWindow = (props) => {
   const {
@@ -12,13 +15,18 @@ export const AddPizzaWindow = (props) => {
     mode: "onBlur",
   });
 
+  let [newMenu, setNewMenu] = useState(menu);
+
   const onSubmit = (data) => {
-    localStorage.setItem("title", data.title);
-    localStorage.setItem("logo", data.logo);
-    localStorage.setItem("price30", data.price30);
-    localStorage.setItem("price35", data.price35);
-    localStorage.setItem("description", data.description);
+    setNewMenu(newMenu.push(data));
+    console.log(newMenu);
     reset();
+    // localStorage.setItem("title", data.title);
+    // localStorage.setItem("logo", data.logo);
+    // localStorage.setItem("price30", data.price30);
+    // localStorage.setItem("price35", data.price35);
+    // localStorage.setItem("description", data.description);
+    // reset();
     // localStorage.clear();
   };
 
@@ -40,17 +48,17 @@ export const AddPizzaWindow = (props) => {
   // newPizzaItem();
 
   return (
-    <div id="modal" className={modal.window}>
-      <div className={modal.window__body}>
-        <div className={modal.window__content}>
-          <a href="/" className={modal.window__close}>
-            X
-          </a>
+    <div className={addPizza.window}>
+      <div className={addPizza.window__body}>
+        <div className={addPizza.window__content}>
+          <Link to="/" className={addPizza.window__close}>
+            <CloseIcon className={addPizza.window__close} />
+          </Link>
           <h2>Добавление пиццы</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <h3>Название пиццы</h3>
             <input
-              className={modal.input}
+              className={addPizza.input}
               {...register("title", {
                 required: true,
               })}
@@ -61,7 +69,7 @@ export const AddPizzaWindow = (props) => {
 
             <h3>Изображение пиццы</h3>
             <input
-              className={modal.input}
+              className={addPizza.input}
               {...register("logo", {
                 required: true,
               })}
@@ -73,7 +81,7 @@ export const AddPizzaWindow = (props) => {
             <div>
               <h3>Стоимость, 30см</h3>
               <input
-                className={modal.input}
+                className={addPizza.input}
                 {...register("price30", {
                   required: true,
                 })}
@@ -85,7 +93,7 @@ export const AddPizzaWindow = (props) => {
             <div>
               <h3>Стоимость, 35см</h3>
               <input
-                className={modal.input}
+                className={addPizza.input}
                 {...register("price35", {
                   required: true,
                 })}
@@ -96,7 +104,7 @@ export const AddPizzaWindow = (props) => {
             </div>
             <h3>Описание</h3>
             <input
-              className={modal.input}
+              className={addPizza.input}
               {...register("description", {
                 required: true,
               })}
@@ -104,7 +112,7 @@ export const AddPizzaWindow = (props) => {
             <div style={{ height: 20 }}>
               {errors?.description && <p>Заполните поле!</p>}
             </div>
-            <div className={modal.btn}>
+            <div className={addPizza.btn}>
               <button type="submit">Добавить</button>
             </div>
           </form>

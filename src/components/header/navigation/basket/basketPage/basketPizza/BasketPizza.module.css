@@ -1,0 +1,43 @@
+.cart {
+  width: 500px;
+  height: 200px;
+  background-color: rgb(248, 248, 248);
+  margin: 15px 0 15px 0;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+}
+.content {
+  display: flex;
+}
+.close {
+  margin-left: 450px;
+}
+.info {
+  margin-left: 10px;
+}
+
+.basket__item {
+  padding: 10px 10px 10px 10px;
+}
+
+.basket__item p {
+  color: gray;
+  font-size: 14px;
+  margin: 5px 0 5px 0;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 {
+  margin: 1px 0 10px 0;
+}
+
+.toOrder {
+  margin: 10px 0 10px 0;
+}

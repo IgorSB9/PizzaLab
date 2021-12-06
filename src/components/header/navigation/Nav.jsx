@@ -3,7 +3,7 @@ import { Basket } from "./basket/Basket";
 import nav from "./Nav.module.css";
 import { Profile } from "./profile/Profile";
 
-export const Nav = () => {
+export const Nav = (props) => {
   return (
     <div className={nav.page__nav}>
       <Profile />

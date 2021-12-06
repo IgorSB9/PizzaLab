@@ -1,6 +1,8 @@
 import React from "react";
 import registration from "./Registration.module.css";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import CloseIcon from "@mui/icons-material/Close";
 
 export function Regisration() {
   const {
@@ -24,6 +26,11 @@ export function Regisration() {
     <div className={registration.page}>
       <div className={registration.body}>
         <div className={registration.content}>
+          <div className={registration.close}>
+            <Link to="/">
+              <CloseIcon className={registration.close__item} />
+            </Link>
+          </div>
           <h2>Регистрация</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <label>
@@ -97,7 +104,12 @@ export function Regisration() {
                 </div>
               </div>
             </label>
-            <button type="submit">Вход</button>
+            <button type="submit">Регистрация</button>
+            <div>
+              <Link to="/signIn" className={registration.link}>
+                У меня уже есть аккаунт
+              </Link>
+            </div>
           </form>
         </div>
       </div>

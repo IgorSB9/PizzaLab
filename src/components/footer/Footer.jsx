@@ -5,7 +5,7 @@ import { Info } from "./info/Info";
 
 export const Footer = () => {
   return (
-    <footer id="footer" className={footer.footer}>
+    <footer id="footer">
       <div className={footer.container}>
         <About />
         <Info />

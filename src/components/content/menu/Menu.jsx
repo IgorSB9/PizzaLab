@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import menu from "./Menu.module.css";
 import { PizzaCard } from "./pizzaCard/PizzaCard";
 
 export const Menu = (props) => {
   return (
     <div className={menu.section__container}>
-      <PizzaCard pizza={props.pizza} />
+      {props.pizza.map((pizza) => (
+        <PizzaCard pizza={pizza} RemovePizza={props.RemovePizza} />
+      ))}
     </div>
   );
 };

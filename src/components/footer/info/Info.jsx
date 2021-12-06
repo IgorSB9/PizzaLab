@@ -1,3 +1,4 @@
+import { Link } from "@mui/material";
 import React from "react";
 import info from "./Info.module.css";
 
@@ -7,19 +8,19 @@ export const Info = () => {
       <h2>Информация</h2>
       <ul>
         <li>
-          <a href="#">О нас</a>
+          <Link to="#">О нас</Link>
         </li>
         <li>
-          <a href="#">Вакансии</a>
+          <Link to="#">Вакансии</Link>
         </li>
         <li>
-          <a href="#">Отзывы</a>
+          <Link to="#">Отзывы</Link>
         </li>
         <li>
-          <a href="#">Помощь</a>
+          <Link to="#">Помощь</Link>
         </li>
         <li>
-          <a href="#">Контакты</a>
+          <Link to="#">Контакты</Link>
         </li>
       </ul>
     </div>

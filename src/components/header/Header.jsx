@@ -4,7 +4,7 @@ import header from "./Header.module.css";
 import { Logo } from "./logo/Logo";
 import { Nav } from "./navigation/Nav";
 
-export const Header = () => {
+export const Header = (props) => {
   return (
     <header id="header" className="header">
       <div className={header.container}>

@@ -15,54 +15,54 @@ export const PizzaCard = (props) => {
   };
   return (
     <div className={card.cart}>
-      {props.pizza.map((mPizza) => {
-        return (
-          <div key={mPizza.id} className={card.cart__container}>
-            <div className={card.menu__logo}>
-              <CloseIcon>x</CloseIcon>
-              <InfoIcon />
-              <img src={mPizza.logo} className={card.logo}></img>
-            </div>
-            <div className={card.menu__title}>
-              <h2>{mPizza.title}</h2>
-            </div>
-            <h3>Размер:</h3>
-            <div className={card.radioGroup}>
-              <FormControl className={card.formControl} component="fieldset">
-                <RadioGroup
-                  row
-                  aria-label="gender"
-                  name="row-radio-buttons-group"
-                  value={value}
-                  onChange={handleChange}
-                >
-                  <FormControlLabel
-                    value="size30"
-                    control={<Radio />}
-                    label="30см"
-                  />
-                  <FormControlLabel
-                    value="size35"
-                    control={<Radio />}
-                    label="35см"
-                  />
-                </RadioGroup>
-              </FormControl>
-            </div>
-            <h3>Стоимость:</h3>
-            <div className={card.cart__price}>
-              <div className={card.cart__coast}>{mPizza.price30}</div>
-              <div className={card.cart__coast}>{mPizza.price35}</div>
-              <div className={card.pizza__toBasket}>
-                <button className={card.btn__toBasket}>В корзину</button>
-              </div>
-            </div>
-            <div className={card.menu__description}>
-              <p className={card.description}>{mPizza.description}</p>
-            </div>
+      <div key={props.pizza.id} className={card.cart__container}>
+        <div className={card.menu__logo}>
+          <div className={card.edit}>
+            <InfoIcon />
+            <CloseIcon
+              onClick={() => props.RemovePizza(props.pizza.id)}
+            ></CloseIcon>
           </div>
-        );
-      })}
+          <img src={props.pizza.logo} alt="logo" className={card.logo}></img>
+        </div>
+        <div className={card.menu__title}>
+          <h2>{props.pizza.title}</h2>
+        </div>
+        <div className={card.radioGroup}>
+          <FormControl className={card.formControl} component="fieldset">
+            <h3>Размер</h3>
+            <RadioGroup
+              row
+              aria-label="gender"
+              name="row-radio-buttons-group"
+              value={value}
+              onChange={handleChange}
+            >
+              <FormControlLabel
+                value="size30"
+                control={<Radio />}
+                label="30см"
+              />
+              <FormControlLabel
+                value="size35"
+                control={<Radio />}
+                label="35см"
+              />
+            </RadioGroup>
+          </FormControl>
+        </div>
+        <h3>Стоимость</h3>
+        <div className={card.cart__price}>
+          <div className={card.cart__coast}>{props.pizza.price30}</div>
+          <div className={card.cart__coast}>{props.pizza.price35}</div>
+          <div className={card.pizza__toBasket}>
+            <button className={card.btn__toBasket}>В корзину</button>
+          </div>
+        </div>
+        <div className={card.menu__description}>
+          <p className={card.description}>{props.pizza.description}</p>
+        </div>
+      </div>
     </div>
   );
 };

@@ -16,7 +16,7 @@ export const PizzaCard = (props) => {
     setValue(event.target.value);
   };
 
-  const dispatch = useDispatch(RemovePizza());
+  const dispatch = useDispatch();
 
   return (
     <div className={card.cart}>
@@ -25,7 +25,7 @@ export const PizzaCard = (props) => {
           <div className={card.edit}>
             <InfoIcon />
             <CloseIcon
-              onClick={() => dispatch(props.pizza.id)}
+              onClick={() => dispatch(RemovePizza(props.pizza.id))}
               // onClick={() => console.log(props.pizza.id)}
             ></CloseIcon>
           </div>

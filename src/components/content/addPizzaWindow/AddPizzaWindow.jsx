@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import addPizza from "./AddPizzaWindow.module.css";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import menu from "../../pizza-list";
 import CloseIcon from "@mui/icons-material/Close";
+import { useDispatch } from "react-redux";
 
 export const AddPizzaWindow = (props) => {
   const {
@@ -15,38 +15,12 @@ export const AddPizzaWindow = (props) => {
     mode: "onBlur",
   });
 
-  // let [newMenu, setNewMenu] = useState(menu);
+  const dispatch = useDispatch();
 
   const onSubmit = (data) => {
-    props.AddNewPizza(data);
-    // console.log(data);
-    // setNewMenu(newMenu.push(data));
+    dispatch(data);
     reset();
-    // localStorage.setItem("title", data.title);
-    // localStorage.setItem("logo", data.logo);
-    // localStorage.setItem("price30", data.price30);
-    // localStorage.setItem("price35", data.price35);
-    // localStorage.setItem("description", data.description);
-    // reset();
-    // localStorage.clear();
   };
-
-  // const newPizzaItem = (pizza) => {
-  //   let newTitle = localStorage.getItem("title");
-  //   let newLogo = localStorage.getItem("logo");
-  //   let newPice30 = localStorage.getItem("price30");
-  //   let newPrice35 = localStorage.getItem("price35");
-  //   let newDescription = localStorage.getItem("description");
-  //   let newItem = [
-  //     { title: newTitle },
-  //     { logo: newLogo },
-  //     { pice30: newPice30 },
-  //     { price35: newPrice35 },
-  //     { description: newDescription },
-  //   ];
-  //   return console.log(newItem);
-  // };
-  // newPizzaItem();
 
   return (
     <div className={addPizza.window}>

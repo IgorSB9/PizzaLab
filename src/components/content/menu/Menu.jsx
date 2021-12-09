@@ -1,12 +1,14 @@
 import React from "react";
 import menu from "./Menu.module.css";
 import { PizzaCard } from "./pizzaCard/PizzaCard";
+import { useSelector } from "react-redux";
 
-export const Menu = (props) => {
+export const Menu = () => {
+  let pizza = useSelector((state) => state.pizza.pizza);
   return (
     <div className={menu.section__container}>
-      {props.pizza.map((pizza) => (
-        <PizzaCard pizza={pizza} RemovePizza={props.RemovePizza} />
+      {pizza.map((pizza) => (
+        <PizzaCard pizza={pizza} />
       ))}
     </div>
   );

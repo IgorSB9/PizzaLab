@@ -6,38 +6,92 @@ import { SignIn } from "./components/authorization/signIn/SignIn";
 import { Routes, Route } from "react-router";
 import { Content } from "./components/content/Content.jsx";
 import { Layout } from "./components/layout/Layout";
-import pizzaList from "./components/pizza-list";
 import { BasketPage } from "./components/header/navigation/basket/basketPage/BasketPage";
+import { OrderPage } from "./components/header/navigation/basket/basketPage/order/OrderPage";
+import logo from "./img//menu/pizza-cart1.jpg";
+import { ProfilePage } from "./components/profilePage/ProfilePage";
 
 function App() {
-  let [pizza, setPizza] = useState(pizzaList);
+  let [user, setUser] = useState([
+    // {
+    //   firstName: user.firstName,
+    //   lastName: user.lastName,
+    //   email: user.email,
+    //   password: user.password,
+    // },
+  ]);
 
-  const RemovePizza = (fId) => {
-    pizza = pizza.filter((f) => f.id !== fId);
-    setPizza(pizza);
-    console.log(pizza);
+  // const AddNewUser = (data) => {
+  //   setUser([...pizza, data]);
+  //   console.log(setUser([...pizza, data]));
+  // };
+
+  let [basket, setBasket] = useState([
+    {
+      id: 1,
+      title: "Мексиканская",
+      size: "30см",
+      logo: logo,
+      description:
+        "Пицца соус, сыр моцарелла, колбаски пепперони, бекон, свинина,сочная курочка, свежий помидор",
+      price: "500р",
+    },
+    {
+      id: 2,
+      title: "Мексиканская",
+      size: "30см",
+      logo: logo,
+      description:
+        "Пицца соус, сыр моцарелла, колбаски пепперони, бекон, свинина,сочная курочка, свежий помидор",
+      price: "500р",
+    },
+  ]);
+  const RemovePizzaFromBasket = (fId) => {
+    basket = basket.filter((f) => f.id !== fId);
+    setBasket(basket);
   };
 
-  const AddNewPizza = (data) => {
-    setPizza([...pizza, data]);
-    console.log([...pizza, data]);
-  };
+  // const RemovePizza = (fId) => {
+  //   pizza = pizza.filter((f) => f.id !== fId);
+  //   setPizza(pizza);
+  //   console.log(pizza);
+  // };
+
+  // const AddNewPizza = (data) => {
+  //   setPizza([...pizza, data]);
+  //   console.log([...pizza, data]);
+  // };
 
   return (
     <div className="App">
-      <Layout pizza={pizza}>
+      <Layout>
         <Routes>
-          <Route path="/signUp" element={<Regisration />} />
+          {/* <Route
+            path="/signUp"
+            // element={<Regisration AddNewUser={AddNewUser} />}
+          /> */}
           <Route path="/signIn" element={<SignIn />} />
-          <Route path="/basket" element={<BasketPage pizza={pizza} />} />
+          {/* <Route
+            path="/basket"
+            element={
+              <BasketPage
+                basket={basket}
+                RemovePizzaFromBasket={RemovePizzaFromBasket}
+              />
+            }
+          /> */}
           <Route
-            path="/addPizza"
-            element={<AddPizzaWindow pizza={pizza} AddNewPizza={AddNewPizza} />}
+            path="/order"
+            element={
+              <OrderPage
+                basket={basket}
+                RemovePizzaFromBasket={RemovePizzaFromBasket}
+              />
+            }
           />
-          <Route
-            path="/"
-            element={<Content pizza={pizza} RemovePizza={RemovePizza} />}
-          />
+          <Route path="/profile" element={<ProfilePage user={{ user }} />} />
+          <Route path="/addPizza" element={<AddPizzaWindow />} />
+          <Route path="/" element={<Content />} />
         </Routes>
       </Layout>
     </div>

@@ -7,29 +7,29 @@ export const BasketPizza = (props) => {
     <div className={basketPizza.cart}>
       <div className={basketPizza.basket__item}>
         <div className={basketPizza.close}>
-          <CloseIcon onClick={() => props.RemovePizza(props.pizza.id)}>
+          <CloseIcon onClick={() => props.RemovePizza(props.basket.id)}>
             X
           </CloseIcon>
         </div>
         <div className={basketPizza.content}>
           <div>
             <img
-              src={props.pizza.logo}
+              src={props.basket.logo}
               alt="logo"
               className={basketPizza.logo}
             ></img>
           </div>
           <div className={basketPizza.info}>
-            <h3>{props.pizza.title}</h3>
+            <h3>{props.basket.title}</h3>
             <div className={basketPizza.size}>
-              <p>{props.pizza.size}</p>
+              <p>{props.basket.size}</p>
             </div>
             <div className={basketPizza.description}>
-              <p>{props.pizza.description}</p>
+              <p>{props.basket.description}</p>
             </div>
             <div className={basketPizza.count}>
               <div className={basketPizza.price}>
-                <h4>{props.pizza.price}</h4>
+                <h4>{props.basket.price}</h4>
               </div>
               {/* <div> Количество пицц </div> */}
             </div>

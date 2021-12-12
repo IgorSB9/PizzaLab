@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import { useDispatch } from "react-redux";
 
-export const AddPizzaWindow = (props) => {
+export const AddPizzaWindow = () => {
   const {
     register,
     handleSubmit,
@@ -18,7 +18,10 @@ export const AddPizzaWindow = (props) => {
   const dispatch = useDispatch();
 
   const onSubmit = (data) => {
-    dispatch(data);
+    dispatch({
+      type: "addNewPizza",
+      payload: data,
+    });
     reset();
   };
 

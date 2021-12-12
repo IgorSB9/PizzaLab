@@ -7,9 +7,7 @@ export const BasketPizza = (props) => {
     <div className={basketPizza.cart}>
       <div className={basketPizza.basket__item}>
         <div className={basketPizza.close}>
-          <CloseIcon onClick={() => props.RemovePizza(props.basket.id)}>
-            X
-          </CloseIcon>
+          <CloseIcon onClick={() => props.RemovePizza(props.basket.id)} />
         </div>
         <div className={basketPizza.content}>
           <div>

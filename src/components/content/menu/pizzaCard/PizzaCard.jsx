@@ -7,7 +7,6 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import { useDispatch } from "react-redux";
-import { RemovePizza } from "../../../../store/pizzaSlice";
 
 export const PizzaCard = (props) => {
   const [value, setValue] = React.useState("size30");
@@ -25,9 +24,13 @@ export const PizzaCard = (props) => {
           <div className={card.edit}>
             <InfoIcon />
             <CloseIcon
-              onClick={() => dispatch(RemovePizza(props.pizza.id))}
-              // onClick={() => console.log(props.pizza.id)}
-            ></CloseIcon>
+              onClick={() =>
+                dispatch({
+                  type: "removePizza",
+                  payload: props.pizza,
+                })
+              }
+            />
           </div>
           <img src={props.pizza.logo} alt="logo" className={card.logo}></img>
         </div>

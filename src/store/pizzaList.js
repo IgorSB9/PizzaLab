@@ -4,7 +4,7 @@ import logo3 from "../img/menu/pizza-cart3.jpg";
 import logo4 from "../img/menu/pizza-cart4.jpg";
 import logo5 from "../img/menu/pizza-cart5.jpg";
 
-let pizza = [
+let pizzas = [
   {
     id: 1,
     logo: logo1,
@@ -70,4 +70,4 @@ let pizza = [
   },
 ];
 
-export default pizza;
+export default pizzas;

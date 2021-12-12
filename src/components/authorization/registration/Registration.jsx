@@ -3,6 +3,7 @@ import registration from "./Registration.module.css";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
+import { useDispatch } from "react-redux";
 
 export function Regisration(props) {
   const {
@@ -13,15 +14,12 @@ export function Regisration(props) {
   } = useForm({
     mode: "onBlur",
   });
-
+  const dispatch = useDispatch();
   const onSubmit = (data) => {
-    let user = [
-      { firstName: data.firstName },
-      { lastName: data.lastName },
-      { email: data.email },
-      { password: data.password },
-    ];
-    props.AddNewUser(user);
+    dispatch({
+      type: "addNewUser",
+      payload: data,
+    });
     reset();
   };
 

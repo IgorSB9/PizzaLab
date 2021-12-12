@@ -1,5 +1,5 @@
 import React from "react";
-import { BasketPizza } from "../basketPizza/BasketPizza";
+import { BasketPizza } from "../basketPage/basketPizza/BasketPizza";
 import order from "./Order.module.css";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -173,9 +173,9 @@ export function OrderPage(props) {
         </div>
         <div className={order.items}>
           <h2>Ваш заказ:</h2>
-          {props.basket.map((basket) => (
+          {/* {props.basket.map((basket) => (
             <BasketPizza basket={basket} RemovePizza={RemovePizza} />
-          ))}
+          ))} */}
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
 import React from "react";
-import profile from "./Profile.module.css";
+import profile from "./ProfileIcon.module.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { Link } from "react-router-dom";
 
-export const Profile = () => {
+export const ProfileIcon = () => {
   return (
     <>
       <Link to="/signUp">

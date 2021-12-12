@@ -1,13 +1,13 @@
 import React from "react";
-import { Basket } from "./basket/Basket";
+import { BasketIcon } from "./basketIcon/BasketIcon";
 import nav from "./Nav.module.css";
-import { Profile } from "./profile/Profile";
+import { ProfileIcon } from "./profileIcon/ProfileIcon";
 
-export const Nav = (props) => {
+export const Nav = () => {
   return (
     <div className={nav.page__nav}>
-      <Profile />
-      <Basket />
+      <ProfileIcon />
+      <BasketIcon />
     </div>
   );
 };

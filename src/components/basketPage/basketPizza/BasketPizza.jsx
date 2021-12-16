@@ -1,8 +1,9 @@
 import React from "react";
-import basketPizza from "./BasketPizza.module.css";
 import CloseIcon from "@mui/icons-material/Close";
+import { useSelector } from "react-redux";
 
 export const BasketPizza = (props) => {
+  const basketPizza = useSelector((state) => state.basket);
   return (
     <div className={basketPizza.cart}>
       <div className={basketPizza.basket__item}>
@@ -12,22 +13,22 @@ export const BasketPizza = (props) => {
         <div className={basketPizza.content}>
           <div>
             <img
-              src={props.basket.logo}
+              src={basketPizza.logo}
               alt="logo"
               className={basketPizza.logo}
             ></img>
           </div>
           <div className={basketPizza.info}>
-            <h3>{props.basket.title}</h3>
+            <h3>{basketPizza.title}</h3>
             <div className={basketPizza.size}>
-              <p>{props.basket.size}</p>
+              <p>{basketPizza.size}</p>
             </div>
             <div className={basketPizza.description}>
-              <p>{props.basket.description}</p>
+              <p>{basketPizza.description}</p>
             </div>
             <div className={basketPizza.count}>
               <div className={basketPizza.price}>
-                <h4>{props.basket.price}</h4>
+                <h4>{basketPizza.price}</h4>
               </div>
               {/* <div> Количество пицц </div> */}
             </div>

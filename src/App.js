@@ -12,20 +12,6 @@ import logo from "./img//menu/pizza-cart1.jpg";
 import { ProfilePage } from "./components/profilePage/ProfilePage";
 
 function App() {
-  let [user, setUser] = useState([
-    // {
-    //   firstName: user.firstName,
-    //   lastName: user.lastName,
-    //   email: user.email,
-    //   password: user.password,
-    // },
-  ]);
-
-  // const AddNewUser = (data) => {
-  //   setUser([...pizza, data]);
-  //   console.log(setUser([...pizza, data]));
-  // };
-
   let [basket, setBasket] = useState([
     {
       id: 1,
@@ -68,7 +54,7 @@ function App() {
               />
             }
           />
-          <Route path="/profile" element={<ProfilePage user={{ user }} />} />
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="/addPizza" element={<AddPizzaWindow />} />
           <Route path="/" element={<Content />} />
         </Routes>

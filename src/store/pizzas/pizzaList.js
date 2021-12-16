@@ -1,8 +1,8 @@
-import logo1 from "../img/menu/pizza-cart1.jpg";
-import logo2 from "../img/menu/pizza-cart2.jpg";
-import logo3 from "../img/menu/pizza-cart3.jpg";
-import logo4 from "../img/menu/pizza-cart4.jpg";
-import logo5 from "../img/menu/pizza-cart5.jpg";
+import logo1 from "../../img/menu/pizza-cart1.jpg";
+import logo2 from "../../img/menu/pizza-cart2.jpg";
+import logo3 from "../../img/menu/pizza-cart3.jpg";
+import logo4 from "../../img/menu/pizza-cart4.jpg";
+import logo5 from "../../img/menu/pizza-cart5.jpg";
 
 let pizzas = [
   {

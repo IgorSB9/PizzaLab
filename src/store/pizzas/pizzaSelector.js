@@ -1,3 +1,3 @@
 export const pizzaSelector = (state) => {
-  return state.pizza;
+  return state.pizza.pizzas;
 };

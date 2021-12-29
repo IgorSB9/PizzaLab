@@ -1,15 +1,10 @@
 import React from "react";
-import profile from "./ProfilePage.module.css";
+import profile from "../../styles/style.module.css";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 export function ProfilePage(props) {
-  const {
-    register,
-    handleSubmit,
-    // formState: { errors },
-    reset,
-  } = useForm({
+  const { register, handleSubmit, reset } = useForm({
     mode: "onBlur",
   });
 

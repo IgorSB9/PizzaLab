@@ -3,11 +3,8 @@ import basketPage from "./BasketPage.module.css";
 import { Link } from "react-router-dom";
 import { BasketPizza } from "./basketPizza/BasketPizza";
 import CloseIcon from "@mui/icons-material/Close";
-import { useSelector } from "react-redux";
 
 export function BasketPage() {
-  const basketPizza = useSelector((store) => store.ba);
-
   return (
     <div className={basketPage.page}>
       <div className={basketPage.body}>
@@ -19,9 +16,7 @@ export function BasketPage() {
             <h2>Корзина</h2>
           </div>
           <div className={basketPage.item}>
-            {basketPizza.map((basket) => (
-              <BasketPizza basket={basket} />
-            ))}
+            <BasketPizza />
           </div>
           <h3>Сумма заказа:</h3>
           <div className={basketPage.toOrder}>

@@ -15,13 +15,7 @@ export const PizzaCard = (props) => {
   const handleChange = (event) => {
     setValue(event.target.value);
   };
-  const NewPizzaItem = {
-    title: props.pizza.title,
-    logo: props.pizza.logo,
-    price30: props.pizza.price30,
-    description: props.pizza.description,
-    size: value,
-  };
+
   const dispatch = useDispatch();
 
   return (
@@ -30,9 +24,7 @@ export const PizzaCard = (props) => {
         <div className={card.menu__logo}>
           <div className={card.edit}>
             <InfoIcon />
-            <CloseIcon
-              onClick={() => dispatch(pizzaActions.addNewPizza(NewPizzaItem))}
-            />
+            <CloseIcon onClick={dispatch(pizzaActions.removePizza(props.id))} />
           </div>
           <img src={props.pizza.logo} alt="logo" className={card.logo}></img>
         </div>
@@ -67,12 +59,7 @@ export const PizzaCard = (props) => {
           <div className={card.cart__coast}>{props.pizza.price30}</div>
           <div className={card.cart__coast}>{props.pizza.price35}</div>
           <div className={card.pizza__toBasket}>
-            <button
-              className={card.btn__toBasket}
-              onClick={() => dispatch(pizzaActions.addNewPizza(NewPizzaItem))}
-            >
-              В корзину
-            </button>
+            <button className={card.btn__toBasket}>В корзину</button>
           </div>
         </div>
         <div className={card.menu__description}>

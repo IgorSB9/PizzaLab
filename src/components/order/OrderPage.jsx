@@ -1,6 +1,5 @@
 import React from "react";
-import { BasketPizza } from "../basketPage/basketPizza/BasketPizza";
-import order from "./Order.module.css";
+import order from "../../styles/style.module.css";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import InputLabel from "@mui/material/InputLabel";

@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import { useDispatch } from "react-redux";
+import { pizzaActions } from "../../store/pizzas/pizzaActions";
 
 export const AddPizzaWindow = () => {
   const {
@@ -18,10 +19,7 @@ export const AddPizzaWindow = () => {
   const dispatch = useDispatch();
 
   const onSubmit = (data) => {
-    dispatch({
-      type: "addNewPizza",
-      payload: data,
-    });
+    dispatch(pizzaActions.addNewPizza(data));
     reset();
   };
 

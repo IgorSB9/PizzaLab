@@ -54,6 +54,10 @@
   padding: 10px;
 }
 
+.error {
+  margin-left: 150px;
+}
+
 .content button {
   appearance: none;
   -webkit-appearance: none;

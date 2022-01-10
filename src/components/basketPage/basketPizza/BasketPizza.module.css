@@ -41,3 +41,13 @@ h3 {
 .toOrder {
   margin: 10px 0 10px 0;
 }
+
+.count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.counter {
+  display: flex;
+}

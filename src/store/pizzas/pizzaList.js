@@ -17,7 +17,7 @@ let pizzas = [
   {
     id: 2,
     logo: logo2,
-    title: "Мясная",
+    title: "Мясная1",
     price30: "499",
     price35: "699",
     description:
@@ -26,7 +26,7 @@ let pizzas = [
   {
     id: 3,
     logo: logo3,
-    title: "Мясная",
+    title: "Мясная2",
     price30: "499",
     price35: "699",
     description:
@@ -35,7 +35,7 @@ let pizzas = [
   {
     id: 4,
     logo: logo4,
-    title: "Мясная",
+    title: "Мясная3",
     price30: "499",
     price35: "699",
     description:
@@ -44,7 +44,7 @@ let pizzas = [
   {
     id: 5,
     logo: logo5,
-    title: "Мясная",
+    title: "Мясная4",
     price30: "499",
     price35: "699",
     description:
@@ -53,7 +53,7 @@ let pizzas = [
   {
     id: 6,
     logo: logo1,
-    title: "Мясная",
+    title: "Мясная5",
     price30: "499",
     price35: "699",
     description:
@@ -62,7 +62,7 @@ let pizzas = [
   {
     id: 7,
     logo: logo1,
-    title: "Мясная",
+    title: "Мясная6",
     price30: "499",
     price35: "699",
     description:

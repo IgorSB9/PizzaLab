@@ -8,8 +8,13 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import { useSelector } from "react-redux";
+import { basketSelector } from "../../store/basket/basketSelector";
+import { BasketPizza } from "../basketPage/basketPizza/BasketPizza";
 
 export function OrderPage(props) {
+  const orderPizzas = Object.assign([], useSelector(basketSelector));
+
   const {
     register,
     handleSubmit,
@@ -156,8 +161,8 @@ export function OrderPage(props) {
                       <em>...</em>
                     </MenuItem>
                     <MenuItem value={"Картой курьеру"}>Картой курьеру</MenuItem>
-                    <MenuItem value={"Наличкой курьеру"}>
-                      Наличкой курьеру
+                    <MenuItem value={"Наличными курьеру"}>
+                      Наличными курьеру
                     </MenuItem>
                   </Select>
                 </FormControl>
@@ -172,9 +177,9 @@ export function OrderPage(props) {
         </div>
         <div className={order.items}>
           <h2>Ваш заказ:</h2>
-          {/* {props.basket.map((basket) => (
-            <BasketPizza basket={basket} RemovePizza={RemovePizza} />
-          ))} */}
+          {orderPizzas.map((basketPizza) => (
+            <BasketPizza basketPizza={basketPizza} />
+          ))}
         </div>
       </div>
     </div>

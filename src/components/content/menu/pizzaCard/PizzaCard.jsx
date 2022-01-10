@@ -8,15 +8,31 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import { useDispatch } from "react-redux";
 import { pizzaActions } from "../../../../store/pizzas/pizzaActions";
+import { basketActions } from "../../../../store/basket/basketActions";
 
 export const PizzaCard = (props) => {
-  const [value, setValue] = React.useState("size30");
+  const [value, setValue] = React.useState("30 см");
+  const [price, setPrice] = React.useState(props.pizza.price30);
 
   const handleChange = (event) => {
     setValue(event.target.value);
+
+    event.target.value === "30 см"
+      ? setPrice(props.pizza.price30)
+      : setPrice(props.pizza.price35);
   };
 
   const dispatch = useDispatch();
+
+  const newBasketPizza = {
+    id: Math.random(),
+    title: props.pizza.title,
+    logo: props.pizza.logo,
+    price: price,
+    count: 1,
+    size: value,
+    description: props.pizza.description,
+  };
 
   return (
     <div className={card.cart}>
@@ -24,7 +40,9 @@ export const PizzaCard = (props) => {
         <div className={card.menu__logo}>
           <div className={card.edit}>
             <InfoIcon />
-            <CloseIcon onClick={dispatch(pizzaActions.removePizza(props.id))} />
+            <CloseIcon
+              onClick={() => dispatch(pizzaActions.removePizza(props.pizza.id))}
+            />
           </div>
           <img src={props.pizza.logo} alt="logo" className={card.logo}></img>
         </div>
@@ -42,12 +60,12 @@ export const PizzaCard = (props) => {
               onChange={handleChange}
             >
               <FormControlLabel
-                value="size30"
+                value="30 см"
                 control={<Radio />}
                 label="30см"
               />
               <FormControlLabel
-                value="size35"
+                value="35 см"
                 control={<Radio />}
                 label="35см"
               />
@@ -56,10 +74,16 @@ export const PizzaCard = (props) => {
         </div>
         <h3>Стоимость</h3>
         <div className={card.cart__price}>
-          <div className={card.cart__coast}>{props.pizza.price30}</div>
-          <div className={card.cart__coast}>{props.pizza.price35}</div>
+          <div className={card.cart__coast}>{price} $</div>
           <div className={card.pizza__toBasket}>
-            <button className={card.btn__toBasket}>В корзину</button>
+            <button
+              className={card.btn__toBasket}
+              onClick={() =>
+                dispatch(basketActions.addNewPizza(newBasketPizza))
+              }
+            >
+              В корзину
+            </button>
           </div>
         </div>
         <div className={card.menu__description}>

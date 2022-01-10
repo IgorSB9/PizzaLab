@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import { useDispatch } from "react-redux";
+import { userActions } from "../../../store/users/userActions";
 
 export function Regisration(props) {
   const {
@@ -16,10 +17,7 @@ export function Regisration(props) {
   });
   const dispatch = useDispatch();
   const onSubmit = (data) => {
-    dispatch({
-      type: "addNewUser",
-      payload: data,
-    });
+    dispatch(userActions.addNewUser(data));
     reset();
   };
 

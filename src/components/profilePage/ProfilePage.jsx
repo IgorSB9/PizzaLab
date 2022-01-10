@@ -1,9 +1,22 @@
-import React from "react";
-import profile from "../../styles/style.module.css";
+import React, { useState } from "react";
+import profile from "./ProfilePage.module.css";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { userSelector } from "../../store/users/userSelector";
 
 export function ProfilePage(props) {
+  let userInfo = Object.assign([], useSelector(userSelector));
+
+  let [firstName, setFirstName] = useState(
+    userInfo.map((info) => info.firstName),
+  );
+  const [lastName, setLastName] = useState(
+    userInfo.map((info) => info.lastName),
+  );
+  const [email, setEmail] = useState(userInfo.map((info) => info.email));
+  const [phone, setPhone] = useState("");
+
   const { register, handleSubmit, reset } = useForm({
     mode: "onBlur",
   });
@@ -11,6 +24,11 @@ export function ProfilePage(props) {
   const onSubmit = (data) => {
     reset();
   };
+
+  const onChangeFirstName = (e) => setFirstName(e.currentTarget.value);
+  const onChangeLastName = (e) => setLastName(e.currentTarget.value);
+  const onChangeEmail = (e) => setEmail(e.currentTarget.value);
+  const onChangePhone = (e) => setPhone(e.currentTarget.value);
 
   return (
     <div className={profile.page}>
@@ -22,22 +40,42 @@ export function ProfilePage(props) {
             <div>
               <label>
                 <div>
-                  <input placeholder={"Имя"} {...register("name")} />
+                  <input
+                    onChange={onChangeFirstName}
+                    value={firstName}
+                    placeholder={"Имя"}
+                    {...register("name")}
+                  />
                 </div>
               </label>
               <label>
                 <div>
-                  <input placeholder={"Фамилия"} {...register("surname")} />
+                  <input
+                    onChange={onChangeLastName}
+                    value={lastName}
+                    placeholder={"Фамилия"}
+                    {...register("surname")}
+                  />
                 </div>
               </label>
               <label>
                 <div>
-                  <input placeholder={"Телефон"} {...register("phone")} />
+                  <input
+                    onChange={onChangePhone}
+                    value={phone}
+                    placeholder={"Телефон"}
+                    {...register("phone")}
+                  />
                 </div>
               </label>
               <label>
                 <div>
-                  <input placeholder={"Email"} {...register("email")} />
+                  <input
+                    onChange={onChangeEmail}
+                    value={email}
+                    placeholder={"Email"}
+                    {...register("email")}
+                  />
                 </div>
               </label>
             </div>

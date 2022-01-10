@@ -12,4 +12,4 @@ const reducers = combineReducers({
 
 export const store = createStore(reducers);
 
-store.subscribe(() => console.log(store.getState().pizza));
+store.subscribe(() => console.log(store.getState().basket));
